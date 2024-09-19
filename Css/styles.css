@@ -1,44 +1,78 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #f7f4d9;
+	/*Fondo color entero*/
+    /*background-color: #282c34;*/ 
+	/*Fondo degradado turqueza*/
+	/*background: rgb(34,193,195);
+	background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(11,19,55,1) 100%);*/
+	/*Fondo degradado azul*/
+	/*background: rgb(35,158,196);
+	background: linear-gradient(0deg, rgba(35,158,196,1) 10%, rgba(11,19,55,1) 90%);*/
+	/*Fondo degradado azul mas oscuro*/
+	background: rgb(46,135,163);
+	background: linear-gradient(0deg, rgba(46,135,163,1) 10%, rgba(11,19,55,1) 90%);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    flex-direction: column;
     text-align: center;
-}
-
-.container {
-    background-color: #fff8d0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
 }
 
 h1 {
-    color: #f39c12;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    /*color: #ff69b4;*/
+	color:#ffb703;
+    /*text-shadow: 0 0 20px rgba(255, 105, 180, 0.7), 0 0 30px rgba(255, 105, 180, 0.5);*/
+	text-shadow: 0 0 20px rgba(255, 183, 3, 0.7), 0 0 30px rgba(255, 183, 3, 0.5);
+    animation: glow 1.5s infinite alternate;
+	margin-bottom: 30px;
 }
 
-button {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+	margin-bottom: 5px;
+    /*color: #ffc0cb;*/
+	color: #fff;
 }
 
-button:hover {
-    background-color: #d87c00;
+a.button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 25px;
+    /*background-color: #ff69b4;*/
+	background-color: #8ecae6;
+	/*color:white;*/
+    color: #333535;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 10px;
+	/*box-shadow: 0 0 20px rgba(255, 105, 180, 0.7);*/
+    box-shadow: 0 0 20px rgba(142, 202, 230, 0.7);
+    transition: background-color 0.3s ease;
 }
 
-canvas {
-    margin-top: 20px;
-    border: 1px solid #ddd;
-    background-color: white;
+a.button:hover {
+    /*background-color: #ff1493;*/
+	background-color: #0b1337;
+	color: white;
+}
+
+@keyframes glow {
+    /*from {
+        text-shadow: 0 0 20px rgba(255, 105, 180, 0.7), 0 0 30px rgba(255, 105, 180, 0.5);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(255, 105, 180, 1), 0 0 60px rgba(255, 105, 180, 0.9);
+    }*/
+	from {
+        text-shadow: 0 0 20px rgba(251, 133, 0, 0.7), 0 0 30px rgba(251, 133, 0, 0.5);
+    }
+    to {
+        text-shadow: 0 0 40px rgba(251, 133, 0, 1), 0 0 60px rgba(251, 133, 0, 0.9);
+    }
 }
