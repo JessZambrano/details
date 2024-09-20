@@ -32,6 +32,7 @@ h1 {
     color: #ffb703; /*rosado ff69b4; amarillo ffb703; verde 056503*/
     /*text-shadow: 0 0 20px rgba(255, 105, 180, 0.7), 0 0 30px rgba(255, 105, 180, 0.5);/*rosado*/
 	text-shadow: 0 0 20px rgba(255, 235, 59, 0.7), 0 0 30px rgba(255, 235, 59, 0.5); /*amarillo*/
+	margin-top: -30px;
 	margin-bottom: 30px;
 	opacity:0; /*oculto al principio*/
 	animation: glow 1.5s infinite alternate, mostrar 2s ease forwards;  /* segundos que se demora en mostrarse por completo */
