@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*background-color: #0b1c2d;*/ /*turqueza oscuro*/
+	/*background-color: #070e2b;*/ /*azul oscuro*/
+	/*background: rgb(21,60,73);*/
+	background: linear-gradient(0deg, rgba(21,60,73,1) 40%, rgba(7,14,43,1) 90%); /*azul oscuro verdoso*/
+}
+
+/*Canva de fondo*/
+#canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Canva para dibujar las flores*/
+#canvas2 {
+	width: 100%;
+    height: 200px; /* Altura fija para el campo de girasoles */
+    /*background-color: #8B4513;*/ /* Color marron para simular el campo */
+	/*color del campo degradado*/
+	/*background: linear-gradient(360deg, rgba(41,14,3,1) 0%, rgba(121,91,9,1) 50%, rgba(161,173,28,0) 100%);*/
+	background: linear-gradient(360deg, rgba(41,14,3,1) 0%, rgba(121,91,9,0.6) 50%, rgba(161,173,28,0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Repetir imagen de Flor */
+.flowers {
+    width: 100%;
+    height: 400px;
+    background-image: url('img/flor_amarilla.png'); /* Coloca aquí la ruta de tu imagen */
+    background-repeat: repeat-x; /* Repetir solo en el eje X (horizontal) */
+    background-position: bottom center; /* Posiciona la imagen en la parte inferior */
+    background-size: contain; /* Ajusta el tamaño para que las imágenes quepan correctamente */
+    position: absolute;
+	
+    bottom: 5%;
+}
+
