@@ -11,7 +11,7 @@ body, html {
 }
 
 /*Canva de fondo*/
-#canvas {
+canvas {
     display: block;
     position: absolute;
     top: 0;
@@ -21,7 +21,7 @@ body, html {
 }
 
 /*Canva para dibujar las flores*/
-#canvas2 {
+.campo {
 	width: 100%;
     height: 200px; /* Altura fija para el campo de girasoles */
     /*background-color: #8B4513;*/ /* Color marron para simular el campo */
@@ -34,15 +34,14 @@ body, html {
 }
 
 /* Repetir imagen de Flor */
-.flowers {
+/*.flowers {
     width: 100%;
     height: 400px;
-    background-image: url('Css/flor_amarilla.png'); /* Coloca aquí la ruta de tu imagen */
-    background-repeat: repeat-x; /* Repetir solo en el eje X (horizontal) */
-    background-position: bottom center; /* Posiciona la imagen en la parte inferior */
-    background-size: contain; /* Ajusta el tamaño para que las imágenes quepan correctamente */
-    position: absolute;
-	
+    background-image: url('img/flor_amarilla.png'); /* Coloca aquí la ruta de tu imagen */
+    /*background-repeat: repeat-x; /* Repetir solo en el eje X (horizontal) */
+    /*background-position: bottom center; /* Posiciona la imagen en la parte inferior */
+    /*background-size: contain; /* Ajusta el tamaño para que las imágenes quepan correctamente */
+    /*position: absolute;
     bottom: 5%;
-}
+}/*
 
