@@ -5,7 +5,12 @@ const ctx = canvas.getContext('2d');
 let stars = [];
 let fireflies = [];
 let flowers = [];
-//const flowerColors = ["#FFEB3B", "#FFD700", "#FFEA00"]; // Colores de flores amarillas
+const flowerColors = ["#FFEB3B", "#FFD700", "#FFEA00"]; // Colores de flores amarillas
+
+let alturaTallo = 0;
+let maxAlturaTallo = 250;
+let anguloHoja = 0;
+let tamañoFlor = 0;
 
 // Ajustar tamaño del canvas al tamaño de la ventana
 function resizeCanvas() {
@@ -46,7 +51,7 @@ function init() {
     }
 
     // Crear flores
-    /*for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 50; i++) {
         flowers.push({
             x: Math.random() * canvas.width,
             y: canvas.height - Math.random() * 100 - 20,
@@ -54,7 +59,7 @@ function init() {
             sway: Math.random() * 0.05 + 0.02,
             angle: Math.random() * Math.PI * 2
         });
-    }*/
+    }
 }
 
 // Dibujar estrellas
@@ -105,12 +110,103 @@ function drawFireflies() {
     });
 }*/
 
+// Animar el crecimiento del tallo
+    function dibujarTallo() {
+        ctx.beginPath();
+        ctx.moveTo(200, 400);
+        ctx.lineTo(200, 400 - alturaTallo);
+        ctx.strokeStyle = '#27ae60';
+        ctx.lineWidth = 6;
+        ctx.stroke();
+    }
+	
+	// Dibujar hojas que se abren
+    function dibujarHojas() {
+        // Hoja izquierda
+        ctx.beginPath();
+        ctx.ellipse(170, 400 - (alturaTallo / 2), 30, 15, Math.PI / 4, 0, Math.PI * 2);
+        ctx.fillStyle = '#2ecc71';
+        ctx.fill();
+
+        // Hoja derecha
+        ctx.beginPath();
+        ctx.ellipse(230, 400 - (alturaTallo / 2), 30, 15, -Math.PI / 4, 0, Math.PI * 2);
+        ctx.fillStyle = '#2ecc71';
+        ctx.fill();
+    }
+	
+	// Dibujar flor
+    function dibujarFlor() {
+        const x = 200;
+        const y = 400 - maxAlturaTallo;
+
+        // Dibujar pétalos
+        const petaloColor = "#f9d71c";
+        for (let i = 0; i < 6; i++) {
+            const angle = (Math.PI * 2 / 6) * i;
+            const petaloX = x + Math.cos(angle) * tamañoFlor;
+            const petaloY = y + Math.sin(angle) * tamañoFlor;
+            ctx.beginPath();
+            ctx.arc(petaloX, petaloY, 20, 0, Math.PI * 2);
+            ctx.fillStyle = petaloColor;
+            ctx.fill();
+        }
+
+        // Centro de la flor
+        ctx.beginPath();
+        ctx.arc(x, y, 15, 0, Math.PI * 2);
+        ctx.fillStyle = "#e67e22";
+        ctx.fill();
+    }
+
+    // Función principal que anima todo el florecimiento
+    function animarFlorecimiento() {
+        // Limpiar el lienzo
+        //ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Crecer tallo
+        if (alturaTallo < maxAlturaTallo) {
+            alturaTallo += 5;
+        }
+
+        // Aumentar el tamaño de la flor
+        if (alturaTallo >= maxAlturaTallo) {
+            if (tamañoFlor < 30) {
+                tamañoFlor += 2;
+            }
+        }
+
+        // Dibujar el tallo
+        dibujarTallo();
+
+        // Dibujar las hojas cuando el tallo está a la mitad
+        if (alturaTallo > maxAlturaTallo / 2) {
+            dibujarHojas();
+        }
+
+        // Dibujar la flor cuando el tallo ha alcanzado su altura máxima
+        if (alturaTallo >= maxAlturaTallo) {
+            dibujarFlor();
+        }
+
+        // Seguir animando si no hemos alcanzado el tamaño máximo de la flor
+        if (tamañoFlor < 30) {
+            requestAnimationFrame(animarFlorecimiento);
+        }
+    }
+
+    
+
+
+
 // Animación principal
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawStars();
     drawFireflies();
-    //drawFlowers();
+    // Iniciar la animación del florecimiento
+    animarFlorecimiento();
+	
     requestAnimationFrame(animate);
 }
 
