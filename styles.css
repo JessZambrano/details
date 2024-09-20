@@ -216,6 +216,14 @@ a.button:hover {
     animation-delay: 5s;
 }
 
+/*Contenedor de musica*/
+iframe {
+    margin-top: 30px;
+	opacity:0; /*oculto al principio*/
+	animation: mostrar 2s ease forwards;  /* segundos que se demora en mostrarse por completo */
+	animation-delay: 5s;  /* Aparece después de 3 segundos */
+}
+
 /*Mostrar objetos*/
 @keyframes mostrar {
     to {
