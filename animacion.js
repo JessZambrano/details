@@ -91,7 +91,7 @@ function generarFlores() {
     const tamañoBaseFlor = Math.min(canvas.width / numeroDeFlores, 100); // Tamaño base de las flores
     for (let i = 0; i < numeroDeFlores; i++) {
         const x = i * (canvas.width / numeroDeFlores) + (canvas.width / numeroDeFlores) / 2; // Posición X
-        const y = canvas.height - 80; // Posición Y de la flor
+        const y = canvas.height - 60; // Posición Y de la flor
         const altoTallo = tamañoBaseFlor * 3.5; // Altura del tallo proporcional al tamaño de la flor
         flowers.push({ x, y, altoTallo, tamañoFlor: 0, alturaTallo: 0, maxAlturaTallo: altoTallo });
     }
