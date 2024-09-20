@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*background-color: #0b1c2d;*/ /*turqueza oscuro*/
+	/*background-color: #070e2b;*/ /*azul oscuro*/
+	/*background: rgb(21,60,73);*/
+	background: linear-gradient(0deg, rgba(21,60,73,1) 40%, rgba(7,14,43,1) 90%); /*azul oscuro verdoso*/
+}
+
+p {
+	position:relative;
+	text-align: center;
+    font-size: 2rem;
+    margin-top: 100px;
+	margin-right: 25px;
+	margin-left: 25px;
+	font-family: 'segoe UI';
+    /*color: #ffc0cb;*/
+	color: #fff; /*blanco*/
+	opacity: 0;  /* Oculto al principio */
+    animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
+	animation-delay: 3s;  /* Aparece después de 3 segundos */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;  /* Hace que el párrafo sea visible */
+    }
+}
+
+/*Canva de fondo*/
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Canva para dibujar las flores*/
+.campo {
+	width: 100%;
+    height: 200px; /* Altura fija para el campo de girasoles */
+    /*background-color: #8B4513;*/ /* Color marron para simular el campo */
+	/*color del campo degradado*/
+	/*background: linear-gradient(360deg, rgba(41,14,3,1) 0%, rgba(121,91,9,1) 50%, rgba(161,173,28,0) 100%);*/
+	/*background: linear-gradient(360deg, rgba(41,14,3,1) 0%, rgba(121,91,9,0.6) 50%, rgba(161,173,28,0) 100%);*/
+	/*background: linear-gradient(0deg, rgba(41,14,3,1) 30%, rgba(108,81,7,0.53) 80%, rgba(161,173,28,0) 100%);*/
+	/*background: linear-gradient(0deg, rgba(98,33,2,1) 0%, rgba(5,101,3,0.81) 30%, rgba(13,170,19,0.32) 70%, rgba(85,204,85,0) 100%);*/
+	background: linear-gradient(0deg, rgba(6,69,2,1) 15%, rgba(5,101,3,0.81) 50%, rgba(13,170,19,0.32) 70%, rgba(85,204,85,0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
