@@ -13,16 +13,28 @@ body, html {
 p {
 	position:relative;
 	text-align: center;
-    font-size: 2rem;
-    margin-top: 100px;
+    	font-size: 2rem;
 	margin-right: 25px;
 	margin-left: 25px;
 	font-family: 'segoe UI';
-    /*color: #ffc0cb;*/
+    	/*color: #ffc0cb;*/
 	color: #fff; /*blanco*/
+}
+
+/*Primer Parrafo*/
+#primero {
+	margin-top: 10%;
 	opacity: 0;  /* Oculto al principio */
-    animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
+    	animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
 	animation-delay: 3s;  /* Aparece después de 3 segundos */
+}
+
+/*Segundo Parrafo*/
+#segundo {
+	margin-top: 10px;
+	opacity: 0;  /* Oculto al principio */
+    	animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
+	animation-delay: 4s;  /* Aparece después de 3 segundos */
 }
 
 @keyframes fadeIn {
