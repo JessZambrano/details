@@ -37,7 +37,7 @@ body, html {
 .flowers {
     width: 100%;
     height: 400px;
-    background-image: url('flor_amarilla.png'); /* Coloca aquí la ruta de tu imagen */
+    background-image: url('Css/flor_amarilla.png'); /* Coloca aquí la ruta de tu imagen */
     background-repeat: repeat-x; /* Repetir solo en el eje X (horizontal) */
     background-position: bottom center; /* Posiciona la imagen en la parte inferior */
     background-size: contain; /* Ajusta el tamaño para que las imágenes quepan correctamente */
