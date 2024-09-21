@@ -79,3 +79,27 @@ iframe {
         opacity: 1;  /* Hace que el objeto sea visible */
     }
 }
+
+#estrofa1 {
+	margin-top: 10%;
+	opacity: 0;  /* Oculto al principio */
+    animation: fadeIn 3s ease forwards, fadeOff 10s ease forwards; /* Se demora 3 segundos en mostrarse por completo */
+	animation-delay: 3s;  /* Aparece después de 3 segundos */
+}
+
+#texto {
+	margin-top: -100px;
+	opacity: 0;  /* Oculto al principio */
+    animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
+	animation-delay: 11s;  /* Aparece después de 3 segundos */
+}
+
+/*Animacion para mostrar objetos*/
+@keyframes fadeOff {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
