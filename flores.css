@@ -14,11 +14,11 @@ body, html {
 p {
 	position:relative;
 	text-align: center;
-    	font-size: 2rem;
+    font-size: 2rem;
 	margin-right: 25px;
 	margin-left: 25px;
 	font-family: 'segoe UI';
-    	/*color: #ffc0cb;*/
+    /*color: #ffc0cb;*/
 	color: #fff; /*blanco*/
 }
 
@@ -26,7 +26,7 @@ p {
 #primero {
 	margin-top: 10%;
 	opacity: 0;  /* Oculto al principio */
-    	animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
+    animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
 	animation-delay: 3s;  /* Aparece después de 3 segundos */
 }
 
@@ -34,7 +34,7 @@ p {
 #segundo {
 	margin-top: 10px;
 	opacity: 0;  /* Oculto al principio */
-    	animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
+    animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
 	animation-delay: 4s;  /* Aparece después de 3 segundos */
 }
 
@@ -73,9 +73,9 @@ iframe {
 	animation-delay: 1s;  /* Aparece después de 1 segundos */
 }
 
+/*Animacion para mostrar objetos*/
 @keyframes fadeIn {
     to {
-        opacity: 1;  /* Hace que el párrafo sea visible */
+        opacity: 1;  /* Hace que el objeto sea visible */
     }
 }
-
