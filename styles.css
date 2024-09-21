@@ -56,7 +56,9 @@ p {
 /*Contenedor de musica*/
 iframe {
 	position: relative;
-    margin-top: 30px;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top:20px;
 	opacity:0; /*oculto al principio*/
 	animation: mostrar 1.5s ease forwards;  /* segundos que se demora en mostrarse por completo */
 	animation-delay: 2.5s;  /* Aparece después de 3 segundos */
@@ -64,8 +66,9 @@ iframe {
 
 a.button {
 	position: relative;
-    display: inline-block;
-    margin-top: 40px;
+    margin-top: 30px;
+	 margin-left: auto;
+	margin-right: auto;
     padding: 15px 25px;
     background-color: #f4e778;/*rosado ff69b4; celeste 8ecae6*; f4e778 amarillo*/
 	color:#0b1337;/*#333535 plomo oscuro*/
