@@ -19,7 +19,7 @@ body {
 	background: linear-gradient(0deg, rgba(35,100,120,1) 10%, rgba(7,14,43,1) 90%);
     color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: center
     align-items: center;
     height: 100vh;
     text-align: center;
@@ -53,7 +53,17 @@ p {
 	animation-delay: 1.5s;  /* Aparece después n segundos */
 }
 
+/*Contenedor de musica*/
+iframe {
+	position: relative;
+    margin-top: 30px;
+	opacity:0; /*oculto al principio*/
+	animation: mostrar 1.5s ease forwards;  /* segundos que se demora en mostrarse por completo */
+	animation-delay: 2.5s;  /* Aparece después de 3 segundos */
+}
+
 a.button {
+position: relative;
     display: inline-block;
     margin-top: 40px;
     padding: 15px 25px;
@@ -69,7 +79,7 @@ a.button {
     transition: background-color 0.3s ease;
 	opacity:0; /*oculto al principio*/
 	animation: glowBox 1.5s infinite alternate, mostrar 3s ease forwards;  /* segundos que se demora en mostrarse por completo */
-	animation-delay: 2.5s;  /* Aparece después n segundos */
+	animation-delay: 6s;  /* Aparece después n segundos */
 }
 
 a.button:hover {
