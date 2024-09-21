@@ -19,7 +19,7 @@ body {
 	background: linear-gradient(0deg, rgba(35,100,120,1) 10%, rgba(7,14,43,1) 90%);
     color: #fff;
     display: flex;
-    justify-content: center
+    justify-content: center;
     align-items: center;
     height: 100vh;
     text-align: center;
@@ -63,7 +63,7 @@ iframe {
 }
 
 a.button {
-position: relative;
+	position: relative;
     display: inline-block;
     margin-top: 40px;
     padding: 15px 25px;
@@ -79,7 +79,7 @@ position: relative;
     transition: background-color 0.3s ease;
 	opacity:0; /*oculto al principio*/
 	animation: glowBox 1.5s infinite alternate, mostrar 3s ease forwards;  /* segundos que se demora en mostrarse por completo */
-	animation-delay: 6s;  /* Aparece después n segundos */
+	animation-delay: 8s;  /* Aparece después n segundos */
 }
 
 a.button:hover {
@@ -224,14 +224,6 @@ a.button:hover {
     left: 90%;
     animation-duration: 7.5s;
     animation-delay: 5s;
-}
-
-/*Contenedor de musica*/
-iframe {
-    margin-top: 30px;
-	opacity:0; /*oculto al principio*/
-	animation: mostrar 2s ease forwards;  /* segundos que se demora en mostrarse por completo */
-	animation-delay: 5s;  /* Aparece después de 3 segundos */
 }
 
 /*Mostrar objetos*/
