@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="css/login_styles.css">
+    <!-- Bootstrap para los iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+	<div class="background"></div>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Acceso</h2>
+			<p>¿Que día de la semana nos vimos por primera vez?</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <!-- Icono de corazon -->
+                    <i class="bi bi-calendar-heart"></i>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <div class="button-group">
+                    <!-- Icono en el botón -->
+                    <button type="submit"><i class="bi bi-box-arrow-in-right"></i> Ingresar</button>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+            </form>
+        </div>
+    </div>
+    <script src="js/login_script.js"></script>
+</body>
+</html>

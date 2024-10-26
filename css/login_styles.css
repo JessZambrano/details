@@ -1,0 +1,144 @@
+/* Estilos generales y reseteo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fondo animado con gradiente dinámico */
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #113948,#004D5D,#0BAEB7,#04D5E7);
+    /*background: linear-gradient(45deg, #17363a,#4aa6d3,#2f7593,#031c30);*/
+    background-size: 200% 200%;
+    animation: gradientBG 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del formulario */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Caja del login */
+.login-box {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Título de formulario */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+/* Parrafo */
+.login-box p {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Input */
+.input-group {
+	display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    font-size: 22px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    font-size: 16px;
+    color: #323232;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: #919191;
+}
+
+.input-group input:focus {
+    background-color: #e5e5e5;
+}
+
+.input-group input:focus::placeholder {
+	color: transparent;
+}
+
+/* Botón */
+.button-group {
+    margin-top: 10px;
+}
+
+.button-group button {
+    width: 100%;
+    padding: 12px;
+    background: #903234;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button-group button:hover {
+    background: #32202E;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mensaje de error */
+.error-message {
+    margin-top: 15px;
+    color: #4285bb;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
