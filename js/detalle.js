@@ -11,6 +11,7 @@ No importa si el tiempo se aleja,
 mi amor, como el mar, siempre regresa.
 
 ❤️❤️❤️❤️`;
+// Mensaje final
 const letterMesag = `¡Felices 4 meses mi amor!
 Te quiero mucho mi cielito
 🥰😍😘`;
@@ -24,7 +25,6 @@ letterContent.innerHTML = `<div class="title">${letterTitle}</div>
 <div class="poem" id="poemContent"></div>
 <div class="mesag" id="mesagContent">${letterMesag}</div>`;
 const poemContent = document.getElementById("poemContent");
-const mesagContent = document.getElementById("mesagContent");
 
 // Función para escribir el poema con efecto de máquina de escribir
 function typeLetter() {
