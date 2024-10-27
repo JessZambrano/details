@@ -16,7 +16,7 @@ body {
 
 .envelope {
     width: 70%;
-    height: 50%;
+    height: 60%;
     position: relative;
     perspective: 1000px;
 }
@@ -60,7 +60,7 @@ body {
     margin-top: 20px;
     opacity: 0;
     animation: fadeIn 3s ease forwards;  /* Se demora 3 segundos en mostrarse por completo */
-	animation-delay: 34s;  /* Aparece después de n segundos */
+	animation-delay: 33s;  /* Aparece después de n segundos */
 }
 
 /*Animacion para mostrar objetos*/
