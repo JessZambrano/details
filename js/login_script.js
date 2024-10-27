@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const validPassword = "viernes";
 
     if (password === validPassword) {
-        window.location.href = "index.html"; // Redirigir a la página principal del sistema
+        window.location.href = "detalle.html"; // Redirigir a la página principal del sistema
     } else {
         errorMessage.textContent = "Respuesta incorrecta ☹️";
         errorMessage.style.display = "block";
