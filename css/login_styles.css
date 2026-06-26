@@ -3,31 +3,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Fondo animado con gradiente dinámico */
 body, html {
+	width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.background {
-    position: absolute;
+.background-container {
+    position: fixed;
+	top: 0;
+	left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #113948,#004D5D,#0BAEB7,#04D5E7);
-    /*background: linear-gradient(45deg, #17363a,#4aa6d3,#2f7593,#031c30);*/
-    background-size: 200% 200%;
-    animation: gradientBG 10s ease infinite;
+	/* Ruta relativa a la imagen (ajústala según tu estructura) */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('../img/img_fondo_1.png');
+    background-size: cover;       /* Escala la imagen para cubrir toda la pantalla */
+    background-position: center;  /* Centra la imagen vertical y horizontalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se duplique en pantallas grandes */
+    background-attachment: fixed; /* Mantiene el fondo fijo (excelente para dispositivos móviles) */
     z-index: -1;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 /* Contenedor del formulario */
 .login-container {
@@ -37,31 +37,37 @@ body, html {
     height: 100%;
 }
 
-/* Caja del login */
+/* Caja del login (Efecto Vidrio Esmerilado Elegante) */
 .login-box {
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco ultra translúcido */
+    backdrop-filter: blur(12px);            /* Difumina la imagen de fondo detrás del cuadro */
+    -webkit-backdrop-filter: blur(12px);    /* Compatibilidad para Safari en iPhones */
+    border: 1px solid rgba(255, 255, 255, 0.35); /* Borde sutil brillante */
+    border-radius: 20px;                    /* Esquinas un poco más suaves */
     padding: 40px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
 /* Título de formulario */
 .login-box h2 {
-    margin-bottom: 20px;
-    color: #ffffff;
-    font-size: 26px;
+    margin-bottom: 15px;
+    color: #D69A29; /* amarillo oscuro */
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-/* Parrafo */
+/* Parrafo de la pregunta */
 .login-box p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: #ffffff;
-    font-size: 18px;
-    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Asegura legibilidad sobre cualquier luz */
 }
 
 /* Input */
@@ -77,16 +83,17 @@ body, html {
     margin-right: 10px;
 }
 
+/* Input (Estilo adaptado al vidrio) */
 .input-group input {
     width: 100%;
-    padding: 14px;
-    border: none;
+    padding: 14px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 30px;
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.9); /* Blanco suave para romper el fondo */
     font-size: 16px;
-    color: #323232;
+    color: #2b1b17;
     outline: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .input-group input::placeholder {
@@ -106,20 +113,25 @@ body, html {
     margin-top: 10px;
 }
 
+/* Botón (El color vino tinto/borgoña que combina con las velas) */
 .button-group button {
     width: 100%;
-    padding: 12px;
-    background: #903234;
-    border: none;
+    padding: 14px;
+    background: #561420; /* Vino profundo romántico */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
-    color: #fff;
+    color: #ffffff;
     font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(86, 20, 32, 0.4);
 }
 
 .button-group button:hover {
-    background: #32202E;
+    background: #3d0c14; /* Más oscuro al pasar el cursor */
+    transform: translateY(-2px); /* Pequeño efecto de flotación */
+    box-shadow: 0 6px 20px rgba(86, 20, 32, 0.6);
 }
 
 /* Animación de entrada */
@@ -134,11 +146,13 @@ body, html {
     }
 }
 
-/* Mensaje de error */
+/* Mensaje de error (Cambiado de azul a un tono carmín/rosa para que combine) */
 .error-message {
-    margin-top: 15px;
-    color: #4285bb;
+    margin-top: 18px;
+    color: #FF8B8B; 
     text-align: center;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     display: none;
 }
