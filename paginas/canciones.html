@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Canciones - Nuestro Aniversario</title>
+    <link rel="stylesheet" href="../css/paginas_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        /* Estilos específicos para la sección de música */
+        .playlist {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .track-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+        .track-card:hover {
+            background: rgba(86, 20, 32, 0.25);
+            border-color: rgba(255, 139, 139, 0.4);
+            transform: translateY(-2px);
+        }
+        .player-icon {
+            font-size: 35px;
+            color: #FF8B8B;
+            background: rgba(255, 139, 139, 0.1);
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 0 10px rgba(255, 139, 139, 0.2);
+        }
+        .track-info {
+            flex-grow: 1;
+        }
+        .track-title {
+            color: #F5E6CA;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 2px;
+            font-family: 'Georgia', serif;
+        }
+        .track-artist {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .track-story {
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left;
+            margin-bottom: 0 !important;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-card">
+            
+            <a href="../detalle.html" class="back-btn">
+                <i class="bi bi-arrow-left-short"></i> Volver al Índice
+            </a>
+
+            <div class="card-decor">
+                <i class="bi bi-music-note-beamed text-accent"></i>
+            </div>
+
+            <h1 class="page-title">4. Las canciones que me hacen pensar en ti</h1>
+
+            <div class="page-content">
+                <p class="highlight-text">
+                    "Cada melodía guarda un pedacito de lo que siento cuando estás en mi mente..."
+                </p>
+                
+                <div class="playlist">
+                    
+                    <!-- Canción 1 -->
+                    <div class="track-card">
+                        <a href="https://youtu.be/d0GqjoUAQLo?si=wcNPEyo-IW19xR00" target="_blank" class="player-icon" style="text-decoration: none;">
+						<i class="bi bi-disc-fill"></i>
+						</a>
+                        <div class="track-info">
+                            <div class="track-title">Pienso en ti</div>
+                            <div class="track-artist">Trémolo</div>
+                            <p class="track-story">
+                                La escuché justo al día siguiente de conocernos. Me moría de ganas de enviártela porque describía exactamente lo que habías causado en mí, pero era demasiado pronto y me dio vergüencita asi que tuve que guardarme el secreto. Hoy sabes que esa canción siempre me recordará a ti.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Canción 2 -->
+                    <div class="track-card">
+                        <a href="https://www.youtube.com/watch?v=zLlmvol7g4k" target="_blank" class="player-icon" style="text-decoration: none;">
+						<i class="bi bi-play-fill"></i>
+						</a>
+                        <div class="track-info">
+                            <div class="track-title">Bonita</div>
+                            <div class="track-artist">Kabah</div>
+                            <p class="track-story">
+                                Una de las primeras canciones que me dedicaste. Cada vez que suena, no puedo evitar sonreír.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Canción 3 -->
+					<div class="track-card">
+						<a href="https://youtu.be/bN0a0jv_QLk?si=m-ScJ4imtmeELo0o" target="_blank" class="player-icon" style="text-decoration: none;">
+							<i class="bi bi-compass-fill"></i>
+						</a>
+						<div class="track-info">
+							<div class="track-title">La Parte de Adelante</div>
+							<div class="track-artist">Andrés Calamaro</div>
+							<p class="track-story">
+								Esta canción calzó perfecta contigo:<br>
+								<span style="display: block; margin: 5px 0 5px 10px; border-left: 2px solid rgba(255,139,139,0.3); padding-left: 8px; color: #FFF0F2;">
+									"Soy vulnerable a tu lado más amable,<br>
+									Soy carcelero de tu lado más grosero,<br>
+									Soy el soldado de tu lado más malvado,<br>
+									Y el arquitecto de tus lados incorrectos..."
+								</span>
+								Una letra que cantaré siempre pensando en ti.
+							</p>
+							</div>
+						</div>
+
+                    <!-- Canción 4 -->
+                    <div class="track-card">
+                        <a href="https://youtu.be/lxYWpDsXqsI?si=8QDal7gBRZU8swn5" target="_blank" class="player-icon" style="text-decoration: none;">
+                            <i class="bi bi-stars"></i>
+                        </a>
+                        <div class="track-info">
+                            <div class="track-title">De la Nada</div>
+                            <div class="track-artist">William Luna</div>
+                            <p class="track-story">
+                                Para mí, la mejor canción de todas. Y tú me confirmarás que sin duda es la que mejor describe nuestra relación. Llegaste así, justamente de la nada, para cambiar mi mundo por completo y enseñarme lo bonito que es amar. Tiene una magia que me hace sentirte cerca sin importar la distancia.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="love-note">
+                    <i class="bi bi-quote quote-icon"></i>
+                    <p>La música tiene sentido porque existes tú; cada letra de amor ahora lleva tu nombre grabado.</p>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <i class="bi bi-stars text-accent"></i> Con amor, para ti <i class="bi bi-stars text-accent"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
