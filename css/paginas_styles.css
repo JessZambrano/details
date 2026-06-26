@@ -1,0 +1,179 @@
+/* Estilos para las Subpáginas del Aniversario */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+    background-color: #2b1b17;
+}
+
+/* Mismo fondo romántico de velas para mantener la consistencia absoluta */
+.main-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../img/img_fondo_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Tarjeta de Contenido en Cristal Esmerilado */
+.content-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 22px;
+    width: 100%;
+    max-width: 650px; /* Un poco más ancha que el índice para facilitar la lectura de textos largos */
+    padding: 40px 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    animation: slideUp 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Botón Volver de forma sutil y elegante */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #F5E6CA; /* Tono oro viejo */
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.back-btn i {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.back-btn:hover {
+    opacity: 1;
+    transform: translateX(-3px);
+}
+
+/* Decoraciones y detalles icónicos */
+.card-decor {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.text-accent {
+    color: #FF8B8B; /* Tono carmín/rosa suave */
+    filter: drop-shadow(0 0 5px rgba(255, 139, 139, 0.4));
+}
+
+/* Título de la página */
+.page-title {
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+    color: #ECD09C;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos de los textos y párrafos */
+.page-content {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.7;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.page-content p {
+    margin-bottom: 20px;
+    text-align: justify; /* Hace que los textos largos se vean muy ordenados */
+}
+
+/* Párrafo destacado / Introducción */
+.page-content .highlight-text {
+    font-size: 17px;
+    color: #F5E6CA;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Bloque de Nota de Amor íntima (Efecto carta grabada) */
+.love-note {
+    background: rgba(86, 20, 32, 0.25); /* Tono vino translúcido */
+    border-left: 3px solid #FF8B8B;
+    border-radius: 4px 12px 12px 4px;
+    padding: 20px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.love-note p {
+	position: relative;
+	top: 8px;
+    font-style: italic;
+    color: #FFF0F2;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.quote-icon {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 35px;
+    color: rgba(255, 139, 139, 0.25);
+}
+
+/* Footer de la tarjeta */
+.card-footer {
+    margin-top: 35px;
+    text-align: center;
+    font-size: 14px;
+    color: #F5E6CA;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+/* Animación de entrada suave */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optimización perfecta para pantallas pequeñas (Celulares de todo tamaño) */
+@media (max-width: 480px) {
+    .content-card {
+        padding: 30px 20px;
+    }
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .page-content {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
